@@ -93,6 +93,7 @@ video {
 
 body * {
   box-sizing: border-box;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 .navigation-panel {
@@ -104,14 +105,14 @@ body * {
   font-size: 24px;
   line-height: 29px;
   color: #1c2a39;
-  font-family: "Montserrat";
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
   margin-top: 47px;
 }
 
 .navigation-links {
-  font-family: "Montserrat";
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 10px;
@@ -211,15 +212,17 @@ body * {
   z-index: 1;
   margin-left: 100%;
 }
-
+.category_books {
+  position: relative;
+  width: 100%;
+}
 .category {
+  position: absolute;
+  left: 0px;
   width: 416px;
   height: 710px;
   background-color: #efeef6;
-  /* position: inherit; */
   display: flex;
-  /* top: 58%;
-    left: -270%; */
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -228,7 +231,7 @@ body * {
 
 .category-list__item {
   padding-bottom: 25px;
-  font-family: "Montserrat";
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -247,9 +250,99 @@ body * {
 
 .books-list {
   display: flex;
+  height: 300px;
+  width: 424px;
+  margin-bottom: 85px;
+}
+.books-list:nth-child(odd) {
+  margin-right: 76px;
+}
+.books {
+  position: absolute;
+  left: 365px;
+  top: 155px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.books-list__cover > img {
+  height: 327px;
+  width: 212px;
+}
+.books-list__description {
+  margin-left: 36px;
+  margin-top: 50px;
+}
+.author {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 4px;
+}
+.title {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 4px;
 }
 
-.books {
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
+.raiting-list {
+  display: flex;
+  height: 14px;
+  width: 121px;
+  border-radius: 0px;
+
+  margin-bottom: 17px;
+}
+
+.average-raiting {
+  height: 12px;
+  width: 12px;
+  background-color: #f2c94c;
+  content: "★";
+}
+.count-raiting {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.desc {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #5c6a79;
+  height: 38px;
+  width: 176px;
+  margin-bottom: 16px;
+}
+.price {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1c2a39;
+  margin-bottom: 16px;
+}
+.button-buy {
+  height: 45px;
+  width: 176px;
+  border: 1px solid #4c3db2;
+  color: #4c3db2;
 }
