@@ -1,85 +1,89 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap");
-
-html,
-body,
-div,
-span,
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap);
+.main,
+.navigation-panel {
+  justify-content: center;
+  display: flex;
+}
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
+header,
+hgroup,
+html,
+i,
+iframe,
 img,
 ins,
 kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
 q,
+ruby,
 s,
 samp,
+section,
 small,
+span,
 strike,
 strong,
 sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
 summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
 time,
-mark,
-audio,
+tr,
+tt,
+u,
+ul,
+var,
 video {
   margin: 0;
   padding: 0;
@@ -90,29 +94,24 @@ video {
   text-decoration: none;
   color: inherit;
 }
-
+.category-list__item,
+.navigation-links,
+.navigation-panel__logo,
+body * {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
 body * {
   box-sizing: border-box;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
-
-.navigation-panel {
-  display: flex;
-  justify-content: center;
-}
-
 .navigation-panel__logo {
   font-size: 24px;
   line-height: 29px;
   color: #1c2a39;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
   margin-top: 47px;
 }
-
 .navigation-links {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 10px;
@@ -126,12 +125,10 @@ body * {
   width: 391px;
   color: #5c6a79;
 }
-
 .navigation-links__books_active {
   font-weight: 900;
   color: #1c2a39;
 }
-
 .navigation-icons {
   margin-top: 54px;
   display: flex;
@@ -139,29 +136,28 @@ body * {
   width: 120px;
   margin-left: 232px;
 }
-
 .main {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-
 .slider {
-  /* position: relative; */
   margin: 20px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-
 .slider__images {
   position: relative;
   width: 1120px;
   height: 702px;
 }
-/*  МОБИЛЬНЕАЯ ВЕРСИЯ*/
 @media (max-width: 768px) {
+  .books,
+  .category,
+  .category_books,
+  .slider__images {
+    position: relative;
+  }
   .slider {
     display: flex;
     justify-content: center;
@@ -169,24 +165,18 @@ body * {
     width: 680px;
   }
   .slider__images {
-    position: relative;
     width: 420px;
     height: 202px;
   }
   .category_books {
-    position: relative;
     width: 680px;
   }
   .books {
-    position: relative;
     width: 300px;
   }
   .books-list__cover > img {
     height: 50px;
     width: 100px;
-  }
-  .category {
-    position: relative;
   }
   .changebook {
     z-index: 1;
@@ -194,7 +184,7 @@ body * {
     margin-left: 93%;
   }
 }
-*/ .slider__images .image {
+.slider__images .image {
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -203,22 +193,18 @@ body * {
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 800ms ease;
+  transition: opacity 0.8s;
   margin-top: 25px;
 }
-
 .slider__images .image.active {
   opacity: 1;
 }
-
 .slider__dots {
   display: flex;
   justify-content: center;
-
   width: 100%;
   margin-top: 40px;
 }
-
 .slider__dots-item {
   width: 10px;
   height: 10px;
@@ -226,20 +212,17 @@ body * {
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
-  transition: background 0.4s ease;
+  transition: background 0.4s;
 }
-
-.slider__dots-item:hover,
-.slider__dots-item.active {
+.slider__dots-item.active,
+.slider__dots-item:hover {
   background: #000;
 }
-
 .changebook {
   z-index: 1;
   margin-top: -58%;
   margin-left: 93%;
 }
-
 .topbook {
   z-index: 1;
   margin-left: 100%;
@@ -248,22 +231,23 @@ body * {
   position: relative;
   width: 100%;
 }
+.books,
 .category {
   position: absolute;
-  left: 0px;
+  display: flex;
+}
+.category {
+  left: 0;
   width: 416px;
   height: 710px;
   background-color: #efeef6;
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 128px;
 }
-
 .category-list__item {
   padding-bottom: 25px;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -271,7 +255,6 @@ body * {
   color: #5c6a79;
   list-style: none;
 }
-
 .category-list__item_active {
   font-weight: 700;
   font-size: 16px;
@@ -279,21 +262,24 @@ body * {
   color: #1c2a39;
   list-style: disc;
 }
-
 .books-list {
   display: flex;
   height: 300px;
   width: 424px;
   margin-bottom: 85px;
 }
+.author,
+.title {
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 4px;
+}
 .books-list:nth-child(odd) {
   margin-right: 76px;
 }
 .books {
-  position: absolute;
   left: 365px;
   top: 155px;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -311,29 +297,34 @@ body * {
   font-size: 10px;
   font-weight: 400;
   line-height: 14px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-bottom: 4px;
 }
 .title {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-bottom: 4px;
 }
-
+.count-raiting,
+.desc {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
 .raiting-list {
   display: flex;
   height: 14px;
   width: 121px;
-  border-radius: 0px;
-
+  border-radius: 0;
   margin-bottom: 17px;
 }
-
+.desc,
+.price {
+  letter-spacing: 0;
+  text-align: left;
+  margin-bottom: 16px;
+}
 .average-raiting {
   height: 12px;
   width: 12px;
@@ -341,36 +332,20 @@ body * {
   content: "★";
 }
 .count-raiting {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
 }
 .desc {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 0em;
-  text-align: left;
   color: #5c6a79;
   height: 38px;
   width: 176px;
-  margin-bottom: 16px;
 }
 .price {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 700;
   line-height: 16px;
-  letter-spacing: 0em;
-  text-align: left;
   color: #1c2a39;
-  margin-bottom: 16px;
 }
 .button-buy {
   height: 45px;
