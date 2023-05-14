@@ -1,4 +1,4 @@
-import "style.css";
+import "./style.css";
 const apiKey = "AIzaSyDYN6BzMhLTqiOfRK5RpIWRRK9yW__2KVY";
 const apiUrl = "https://www.googleapis.com/books/v1/volumes";
 
