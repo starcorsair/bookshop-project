@@ -194,7 +194,7 @@ body * {
     margin-left: 93%;
   }
 }
-*/ .slider__images .image {
+.slider__images .image {
   background-size: cover;
   background-position: center center;
   width: 100%;

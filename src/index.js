@@ -1,4 +1,13 @@
 import "./style.css";
+import "./images/banner1.png";
+import "./images/banner2.png";
+import "./images/banner3.png";
+import "./images/changebook.png";
+import "./images/cover.png";
+import "./images/topbooks.png";
+import "./images/search.png";
+import "./images/shop-bag.png";
+import "./images/user.png";
 const apiKey = "AIzaSyDYN6BzMhLTqiOfRK5RpIWRRK9yW__2KVY";
 const apiUrl = "https://www.googleapis.com/books/v1/volumes";
 
@@ -26,7 +35,7 @@ function submitForm(e) {
       const bookList = document.querySelector(".books");
 
       data.items.forEach((book) => {
-        bookTemplate = `<div class="books-list">
+        let bookTemplate = `<div class="books-list">
                         <div class="books-list__cover" >
                             <img src=${
                               book.volumeInfo.imageLinks.thumbnail
